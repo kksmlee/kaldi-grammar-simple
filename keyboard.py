@@ -261,6 +261,7 @@ grammarCfg.cmd.map = Item(
         "space": release + Key("space"),
         "space [<n>]": release + Key("space:%(n)d"),
         "(enter|slap|slop) [<n>]": release + Key("enter:%(n)d"),
+        "py go": Key("s-enter"),
         "tab [<n>]": Key("tab:%(n)d"),
         ###"delete [<n>]": Key("del/3:%(n)d"),
         "delete [this] line": Key("home, s-end, del"),  # @IgnorePep8
