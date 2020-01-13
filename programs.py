@@ -29,6 +29,10 @@ gitcommand = {}
 for command in gitcommand_array:
     gitcommand[command] = command
 
+def new_term():
+    import os
+    os.system("/usr/bin/gnome-terminal")
+
 class ProgramsRule(MappingRule):
     mapping = {
         "vim save": Key("escape, colon, w, enter"),
@@ -88,7 +92,8 @@ class ProgramsRule(MappingRule):
         'really close window': Key('a-f4'),
         'maximize window': Key('a-f10'),
         'minimize window': Key('a-f9'),
-        'open new terminal': Key('ca-m'),
+        #'open new terminal': Key('ca-m'),
+        'open new terminal': Function(new_term),
         'copy this image': Key('c-c/10,ca-right/10,c-v/10,ca-left'),
         'image go up': Key('a-up'),
         'read elf': Text('readelf -Wa '),
